@@ -1,0 +1,163 @@
+@import "colors";
+
+/* Rules without a media query present take affect when the webpage is 1,200px 
+ * or less. */
+main.list,
+main.single{
+}
+
+
+/************************************************
+ * <= 1050px width
+ * *********************************************/
+@media(max-width: 1050px){
+}
+
+
+/************************************************
+ * <= 800px width
+ * *********************************************/
+@media(max-width: 800px){
+
+	#main-nav{
+		display: none;
+	}
+
+	a.toggle{
+		display: block !important;
+		margin-right: 0px;
+		width: 66px;
+		text-align: center;
+		font-size: 2.2rem;
+	}
+
+	body > header{
+
+		justify-content: space-between;
+		
+		ul.main{
+			display: none;
+			flex-direction: column;
+			position: absolute;
+			top: 100%;
+			right: 0%;
+			border-top: 2px solid #ffffff;
+			background-color: #2b2c2d;
+			width: 220px;
+			height: auto;
+
+			li{
+				text-align: center;
+
+				&.active{
+					border-left: 4px solid #cb1a20;
+					border-bottom: none !important;
+				}
+
+				&.parent{
+					padding-left: 0;
+				}
+			}
+
+			ul.sub.menu{
+				position: relative;
+				border-left: none;
+				border-right: none;
+
+				li{
+					text-align: right;
+				}
+			}
+		}
+	}
+
+	footer span.normal{
+		display: none;
+	}
+
+	body>footer span.small{
+		display: inline;
+	}
+}
+
+
+/************************************************
+ * <= 600px width
+ * *********************************************/
+@media(max-width: 600px){
+
+	main.list,
+	main.single{
+
+		h1{
+			font-size: 3.5rem;
+		}
+
+		h2{
+			font-size: 2.5rem;
+		}
+
+		.alignleft,
+		.aligncenter,
+		.alignright{
+			display: block;
+			margin: 0 auto;
+			float: none;
+		}
+	}
+
+	form{
+		width: 85%;
+	}
+
+	body > footer{
+
+		padding: 5px 12px;
+		span{
+			text-align: center;
+		}
+	}
+}
+
+
+/************************************************
+ * <= 550px width
+ * *********************************************/
+@media(max-width: 550px){
+}
+
+
+/************************************************
+ * <= 450px width
+ * *********************************************/
+@media(max-width: 450px){
+
+	main.list,
+	main.single{
+		h1{
+			font-size: 3.2rem;
+		}
+
+		h2{
+			font-size: 2.5rem;
+		}
+	}
+
+	body > footer{
+	
+		span.normal{
+			display: none;
+		}
+
+		span.small{
+			display: inline-block;
+			padding-top: 0;
+			text-align: center;
+			line-height: 60px;
+		}
+	}
+
+	body > header nav .section-image img{
+		height: 10px;
+	}
+}

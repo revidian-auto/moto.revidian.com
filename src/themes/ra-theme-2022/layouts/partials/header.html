@@ -1,0 +1,34 @@
+{{ $currentPage := . }}
+<header>
+	<span class="site-title"><a href="{{ .Site.BaseURL  }}"><img src="/assets/img/logos/rm-logo-dark.svg" /></a></span>
+	<a class="toggle" onclick="toggleMainNav();"><span class="fa fa-bars"></span></a>
+	<ul id="main-nav" class="menu h main">
+		<li><a href="{{ .Site.BaseURL  }}"><i class="fa fa-home"></i></a></li>
+		{{- $urlPart1 := print "/" (index (split .Permalink "/") 3) "/" -}}
+		{{ range .Site.Menus.main }}
+			<li class="{{ if or ($currentPage.IsMenuCurrent "main" .) (eq ($urlPart1 | lower) (.URL | lower)) }}active{{end}}">
+				<a href="{{ .URL }}">{{ .Name }}</a>
+			</li>
+		{{ end }}
+	</ul>
+	{{ if .Section }}
+	<nav>
+		<a class="section-image" href="{{ .Site.BaseURL  }}/{{ .Section }}">
+		{{ $subLogoURL := printf "/static/assets/img/%s-logo.svg" .Section }}
+		{{ if (fileExists $subLogoURL) }}
+			<img src="/assets/img/{{ .Section }}-logo.svg" />
+		{{ else }}
+		{{ .Section | title }}
+		{{ end }}
+		</a>
+		<ul class="menu h secondary">
+		{{ $curPage := . }}
+		{{ range index .Site.Menus .Section }}
+			<li class="{{ if in $curPage.Permalink .URL }}active{{end}}">
+				<a href="{{ .URL }}">{{ .Name }}</a>
+			</li>
+		{{ end }}
+		</ul>
+	</nav>
+	{{ end }}
+</header>

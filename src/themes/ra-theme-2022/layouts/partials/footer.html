@@ -1,0 +1,22 @@
+<footer>
+	<span class="normal">© {{ now.Format "2006" }} Revidian Enterprises</span>
+	<span class="small">© Revidian</span>
+	<span class="site-title">{{ .Site.Title }}</span>
+	<ul class="menu h social">
+	{{ with .Site.Params.social.twitter }}
+		<li><a href="https://twitter.com/{{ . }}" rel="me"><span class="fa fa-twitter"></span></a>
+	{{ end }}
+	{{ with .Site.Params.social.mastodon }}
+		<li><a href="{{ . }}" rel="me"><span class="fa fa-mastodon"></span></a>
+	{{ end }}
+	{{ with .Site.Params.social.facebook }}
+		<li><a href="https://facebook.com/{{ . }}" rel="me"><span class="fa fa-facebook"></span></a>
+	{{ end }}
+	{{ with .Site.Params.social.linkedin }}
+		<li><a href="https://www.linkedin.com/company/{{ . }}" rel="me"><span class="fa fa-linkedin"></span></a></li>
+	{{ end }}
+	{{ with .Site.Params.social.github }}
+		<li><a href="https://github.com/{{ . }}" rel="me"><span class="fa fa-github"></span></a></li>
+	{{ end }}
+	</ul>
+</footer>

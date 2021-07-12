@@ -1,0 +1,88 @@
+html{
+	font-size: 62.5%;
+}
+
+body{
+	color: #1C1C1C;
+	line-height: 1.5;
+	font-family: "Poppins", sans-serif;
+	font-size: 1.8rem;
+
+	a{
+		color: #1c1c1c;
+	}
+}
+
+body > header{
+
+	.site-title{
+		font-size: 2.0rem;
+		font-weight: bold;
+		font-family: "Poppins", sans-serif;
+	}
+		.site-title .division{
+			font-family: "Audiowide", sans-serif;
+		}
+
+	a{
+		color: white;
+		text-decoration: none;
+	}
+
+	ul.menu li.active > a{
+		font-weight: bold;
+	}
+
+	nav,
+	nav a{
+		color: #1c1c1c;
+	}
+
+	nav.section,
+	nav.section a{
+		color: white;
+	}
+
+	ul.secondary a{
+		color: black;
+	}
+}
+
+
+main{
+	h1,
+	h2,
+	h3,
+	h4,
+	h5{
+	}
+
+	h1{
+		text-align: center;
+		text-decoration: none;
+		font-size: 3.5rem;
+	}
+
+	h2{
+		margin-bottom: 0;
+		font-size: 2.9rem;
+	}
+
+	.content a{
+		color: $tertiary-color;
+		font-weight: bold;
+	}
+
+	a.continue{
+		font-weight: bold;
+	}
+
+	a.comment{
+		font-weight: bold;
+	}
+}
+
+body > footer{
+	color: white;
+	font-size: 1.5rem;
+}

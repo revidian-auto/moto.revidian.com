@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="{{ "vendor/sanitize-8.0/sanitize.css" | absURL }}" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins&Roboto+Mono:wght@400;700&display=swap" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+{{- $style := resources.Get "css/main.scss" | toCSS | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $style.Permalink }}" />
+{{- if .IsHome }}
+	{{- $style := resources.Get "css/homepage.scss" | toCSS }}
+	<link rel="stylesheet" href="{{ $style.Permalink }}" />
+{{ end }}
+{{- $style := resources.Get "css/mobile.scss" | toCSS | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $style.Permalink }}" media="(max-width:1200px)" />
+{{ with .Page.Params.css }}
+	{{ range . -}}
+		<link rel="stylesheet" href="{{ . }}" crossorigin="" />
+	{{- end }}
+{{ end }}

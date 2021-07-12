@@ -1,0 +1,58 @@
+baseurl: "https://moto.revidian.com/"
+title: "Revidian Moto"
+theme: ra-theme-2022
+
+googleAnalytics: "G-JNW0YHHPMM"
+
+enableEmoji: true
+
+params:
+  description: ""
+  tagline: "A brand for motorcycle enthusiasts with a flair for tech and engineering."
+  mailchimpURL: ""
+  social:
+    twitter: "RevidianMoto"
+    facebook: "RevidianAuto"
+    linkedin: "RevidianMoto"
+    mastodon: "https://nanobyte.cafe/@RevidianMoto"
+    github: "revidian-moto"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+menu:
+  main:
+    - name: "Blog"
+      url: "/blog/"
+      weight: 5
+    - name: "R/M Garage"
+      url: "/garage/"
+      weight: 10
+    #- name: "Forum"
+    #  url: "https://forum.auto.revidian.com"
+    #  weight: 15
+    - name: "Newsletter"
+      url: "/newsletter/"
+      weight: 20
+    - name: "Contact Us"
+      url: "/contact/"
+      weight: 25
+  garage:
+    - name: "Home"
+      url: "/garage/"
+      weight: -1
+    - name: "Features"
+      url: "/garage/features"
+      weight: 10
+    - name: "Pricing"
+      url: "/garage/pricing/"
+      weight: 15
+  blog:
+    - name: "Home"
+      url: "/blog/"
+      weight: -1
+    - name: "Submit Ideas"
+      url: "/blog/submit-ideas/"
+      weight: 5
