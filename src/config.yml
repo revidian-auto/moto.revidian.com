@@ -27,6 +27,9 @@ menu:
     - name: "Blog"
       url: "/blog/"
       weight: 5
+    - name: "Events"
+      url: "/events/"
+      weight: 7
     - name: "R/M Garage"
       url: "/garage/"
       weight: 10
