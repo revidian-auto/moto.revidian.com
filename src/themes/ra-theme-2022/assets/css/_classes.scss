@@ -72,3 +72,20 @@ ul.menu.h{
 	&.h > li{
 	}
 }
+
+.card-grid{
+	display: flex;
+	flex-wrap: wrap;
+
+	h3{
+		width: 100%;
+	}
+
+	.card{
+		display: inline-block;
+		margin: 0 20px 30px 0;
+		border-left: 8px solid $ra-blue;
+		padding: 2px 10px;
+		width: 300px;
+	}
+}
