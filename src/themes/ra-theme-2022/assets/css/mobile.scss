@@ -50,8 +50,11 @@ main.single{
 				text-align: center;
 
 				&.active{
-					border-left: 4px solid #cb1a20;
+					border-left: 4px solid $ra-blue;
 					border-bottom: none !important;
+				}
+				&.active::after{
+					display: none;
 				}
 
 				&.parent{
